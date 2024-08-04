@@ -1,0 +1,30 @@
+.dashboard_container {
+  .icon_bg_color {
+    background-color: rgba(0, 0, 0, 0.09);
+  }
+  .MuiPaper-root {
+    background-color: #f2f2f2;
+  }
+
+  .recharts-surface {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .table_container {
+    .head_table_cell {
+      font-weight: 500;
+      font-size: 16px;
+      white-space: nowrap;
+    }
+    .MuiTableCell-root {
+      padding: 8px 4px !important;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .mt_32 {
+      margin-top: 28px !important;
+    }
+  }
+}

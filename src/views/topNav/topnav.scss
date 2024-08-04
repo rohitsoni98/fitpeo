@@ -1,0 +1,41 @@
+$primary-bg-color: #fff;
+$primary-shadow-color: #0000000f;
+$secondary-shadow-color: #00000005;
+$icon-bg-color: rgba(0, 0, 0, 0.09);
+
+@mixin box-shadow($primary, $secondary) {
+  box-shadow: 0 1px 7px $primary, 0 1px 3px $secondary;
+}
+
+@mixin responsive-container($child) {
+  width: 100%;
+
+  #{$child} {
+    width: 100%;
+  }
+}
+
+.top_nav_container {
+  flex-wrap: wrap;
+  row-gap: 8px;
+  padding: 8px 16px;
+  background-color: $primary-bg-color;
+  @include box-shadow($primary-shadow-color, $secondary-shadow-color);
+
+  .icon_container {
+    .button {
+      background-color: $icon-bg-color;
+      padding: 6px !important;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .left_container {
+      @include responsive-container(".search_input");
+    }
+
+    .right_container {
+      margin: auto;
+    }
+  }
+}
